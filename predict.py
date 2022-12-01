@@ -2,7 +2,7 @@ from skimage import io
 import cv2
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as font_manager
-font_manager._rebuild()
+# font_manager._rebuild()
 plt.rcParams['font.family'] = 'Tahoma'
 
 import onnxruntime as rt
