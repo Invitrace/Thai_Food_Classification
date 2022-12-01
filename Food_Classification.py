@@ -41,7 +41,7 @@ st.set_page_config(
     )
 
 st.title("ผู้ช่วยทำนายเมนูอาหารไทย")
-st.image('CU_UTC_Rad_logo.png',use_column_width=True)
+st.image('LogoColorTextLand.png',use_column_width=True)
 
 # https://github.com/Amiiney/cld-app-streamlit/blob/main/app.py
 
