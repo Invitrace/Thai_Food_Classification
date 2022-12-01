@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as font_manager
 fm = matplotlib.font_manager
 fm._get_fontconfig_fonts.cache_clear()
-font_manager._rebuild()
+# font_manager._rebuild()
 plt.rcParams['font.family'] = 'Tahoma'
 
 import onnxruntime as rt
