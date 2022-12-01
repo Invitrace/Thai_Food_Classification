@@ -4,9 +4,10 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as font_manager
 import os
+os.system('cmd /k "sudo apt install msttcorefonts -qq"')
 os.system('cmd /k "rm ~/.cache/matplotlib -rf"')
-fm = matplotlib.font_manager
-fm._get_fontconfig_fonts.cache_clear()
+# fm = matplotlib.font_manager
+# fm._get_fontconfig_fonts.cache_clear()
 # font_manager._rebuild()
 plt.rcParams['font.family'] = 'Tahoma'
 
