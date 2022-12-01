@@ -33,8 +33,15 @@ def process(img_path):
         i += 1
     st.image(get_img_from_fig(fig))
 
+st.set_page_config(
+    page_title="i-LiveWell:AI-Assisted Thai-Food Menu Image Reading",
+    page_icon="🍜",
+    # layout="wide",
+    # initial_sidebar_state="expanded",
+    )
 
 st.title("ผู้ช่วยทำนายเมนูอาหารไทย")
+st.image('CU_UTC_Rad_logo.png',use_column_width=True)
 
 # https://github.com/Amiiney/cld-app-streamlit/blob/main/app.py
 
