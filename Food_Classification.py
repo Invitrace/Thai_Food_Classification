@@ -40,8 +40,9 @@ st.set_page_config(
     # initial_sidebar_state="expanded",
     )
 
+st.image('iLiveWellAji.jpg',use_column_width=True)
 st.title("ผู้ช่วยทำนายเมนูอาหารไทย")
-st.image('LogoColorTextLand.png',use_column_width=True)
+
 
 # https://github.com/Amiiney/cld-app-streamlit/blob/main/app.py
 
