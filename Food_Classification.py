@@ -33,7 +33,7 @@ def process(img_path):
         i += 1
     st.image(get_img_from_fig(fig))
 
-    with st.expander("Show Image with Bounding Box for Processing AI"):
+    with st.expander("Show Image with Bounding Box for AI Processing"):
         st.image(img_with_draw, use_column_width=True, channels="RGB")
 
 st.set_page_config(
