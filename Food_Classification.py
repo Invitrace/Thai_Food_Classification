@@ -9,9 +9,9 @@ display_image_path = 'display_image'
 def process(img_path):
     img = io.imread(img_path)
     st.image(img, use_column_width=True, channels="RGB")
-    label = predict_image_onnx(img)
+    label, label_prob, img_with_draw = predict_image_onnx(img)
 
-    text = f"""Top 5 Predicted Menu:"""
+    text = f"""Top 3 Predicted Menu:"""
     answer = f"""{' | '.join(label)}"""
     # st.success(text)
     st.markdown(f"<h3 style='text-align: center; color: green;'>{text}</h1>", unsafe_allow_html=True)
@@ -19,8 +19,8 @@ def process(img_path):
 
     fig = plt.figure(figsize=(30, 8))
     i = 1
-    for label_name in label:
-        plt.subplot(1,5,i)
+    for label_name, label_name_prob in zip(label, label_prob):
+        plt.subplot(1,3,i)
         idx_name = name2idx[label_name]
         src_img = display_image_path + '/' + idx_name + '.jpg'
         img = io.imread(src_img)
@@ -32,6 +32,9 @@ def process(img_path):
         plt.axis('off')
         i += 1
     st.image(get_img_from_fig(fig))
+
+    with st.expander("Show Image with Bounding Box for Processing AI"):
+        st.image(img_with_draw, use_column_width=True, channels="RGB")
 
 st.set_page_config(
     page_title="i-LiveWell:AI-Assisted Thai-Food Menu Image Reading",
