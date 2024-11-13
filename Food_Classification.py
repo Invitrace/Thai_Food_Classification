@@ -33,8 +33,8 @@ def process(img_path):
         i += 1
     st.image(get_img_from_fig(fig))
 
-    # with st.expander("Show Image with Bounding Box for AI Processing"):
-        # st.image(img_with_draw, use_column_width=True, channels="RGB")
+    with st.expander("Show Image with Bounding Box for AI Processing"):
+        st.image(img_with_draw, use_column_width=True, channels="RGB")
 
 st.set_page_config(
     page_title="i-LiveWell:AI-Assisted Thai-Food Menu Image Reading",
